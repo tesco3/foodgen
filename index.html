@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    //idö motorja
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+    //random generator
+ var szamlalo = 0;
+
+        console.log("Hello world");
+
+        szamlalo = Math.floor(Math.random() * 100);
+        document.write(szamlalo, ' a(z) random  generált szám ');
+
+        document.write("\n");
+        document.write("<br>");
+        document.write("<br>");
+    //kaja generator
+        function kaja() {
+        var myArray = ['Paprikáskrumpli', 'Makaróni','Rétes','Csírkecomb','Palacsinta','Rakotkrumpli','Gyümölcsleves','Sárgaborsó fözelék','Zöldbableves','Csontleves','Tarhonya','Zölcségleves','Babgulyás','Rántothús','Fánk','Turó pörgő fánk','Tejfölös hús','Pizza','Csirke máj','Töltött paprika','Rántot sajt','Lecsó','Bukta','Sóska','Spenót','Tócsni','Szilvásgombóc','Lángos','Képviselőfánk','Zöldbab','Aranygaluska','Pörkölt','Kürtőskalács','Töltött paprika','Túrós Csusza','Túrógombóc','Bejgli','Szilvásgombóc','Hurka','Lecsó','Nokedli','Grill','Mátraiborzas','Özgerinces csírke','Kínai']; 
+
+        var rand = myArray[Math.floor(Math.random() * myArray.length)];
+
+        alert(rand);
+        } 
+
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+ <p></p>
+    <input id="clickMe" type="button" value="katt ide a kaja megjelenítéséhez" onclick="kaja();" />
+
+   <p></p>
+    <button type="button"
+            onclick="document.getElementById('demo').innerHTML = Date()">
+       katt ide az idő megjelenítéséhez
+    </button>
+   
+    
+</body>
+</html>
